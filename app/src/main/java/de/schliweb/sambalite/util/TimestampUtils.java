@@ -201,7 +201,7 @@ public class TimestampUtils {
           pfd.close();
         }
       }
-    } catch (Exception e) {
+    } catch (Throwable e) {
       LogUtils.w(
           TAG,
           "[TIMESTAMP] SAF best-effort failed (expected on some devices): "

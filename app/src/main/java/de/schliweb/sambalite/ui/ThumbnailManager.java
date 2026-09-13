@@ -53,15 +53,28 @@ public class ThumbnailManager {
   private static final long NOCOVER_MAX_AGE_MS = 7L * 24 * 60 * 60 * 1000; // 7 days
   private static final int THUMBNAIL_COMPRESS_QUALITY = 85;
   private static final Set<String> IMAGE_EXTENSIONS =
-      Set.of(
-          "jpg", "jpeg", "png", "gif", "bmp", "webp", "heif", "heic", "avif", "wbmp", "ico", "tiff",
-          "tif");
+      Collections.unmodifiableSet(
+          new java.util.HashSet<>(
+              java.util.Arrays.asList(
+                  "jpg",
+                  "jpeg",
+                  "png",
+                  "gif",
+                  "bmp",
+                  "webp",
+                  "heif",
+                  "heic",
+                  "avif",
+                  "wbmp",
+                  "ico",
+                  "tiff",
+                  "tif")));
   private static final Set<String> THUMBNAIL_EXTENSIONS;
 
   static {
     java.util.HashSet<String> all = new java.util.HashSet<>(IMAGE_EXTENSIONS);
     all.add("pdf");
-    THUMBNAIL_EXTENSIONS = Set.copyOf(all);
+    THUMBNAIL_EXTENSIONS = Collections.unmodifiableSet(all);
   }
 
   @NonNull private final SmbRepository smbRepository;

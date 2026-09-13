@@ -13,6 +13,7 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import de.schliweb.sambalite.util.LogUtils;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -116,7 +117,7 @@ public class SyncStateStore {
       LogUtils.e(
           TAG,
           "[TIMESTAMP] Failed to get sync states for root: " + rootUri + ": " + e.getMessage());
-      return List.of();
+      return Collections.emptyList();
     }
   }
 
