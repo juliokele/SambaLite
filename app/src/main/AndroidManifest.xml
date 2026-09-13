@@ -8,8 +8,8 @@
     
     <!-- Background work permissions for reliable SMB operations -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" tools:targetApi="28" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" tools:targetApi="34" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" tools:targetApi="33" />
     
     <!-- Request to ignore battery optimizations for reliable background operation -->
@@ -86,7 +86,8 @@
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="dataSync"
-            android:stopWithTask="false" />
+            android:stopWithTask="false"
+            tools:targetApi="34" />
 
         <!-- Disable default WorkManager initializer; SambaLiteApp provides custom config -->
         <provider
@@ -104,6 +105,7 @@
         <service
             android:name="androidx.work.impl.foreground.SystemForegroundService"
             android:foregroundServiceType="dataSync"
+            tools:targetApi="34"
             tools:node="merge" />
     </application>
 

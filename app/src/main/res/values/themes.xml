@@ -7,7 +7,7 @@
         <!-- System bar attributes for Android 15+ -->
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
 
         <!-- Material Design 3 color tokens -->
         <item name="colorPrimary">@color/md_theme_light_primary</item>
@@ -51,7 +51,7 @@
         <!-- System bar attributes for Android 15+ -->
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
 
         <!-- Material Design 3 color tokens -->
         <item name="colorPrimary">@color/md_theme_light_primary</item>

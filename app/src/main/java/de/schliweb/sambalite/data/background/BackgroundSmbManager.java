@@ -167,11 +167,11 @@ public class BackgroundSmbManager {
       return result;
     }
 
-    appContext
-        .getMainExecutor()
+    androidx.core.content.ContextCompat.getMainExecutor(appContext)
         .execute(
             () -> {
-              appContext.getMainExecutor().execute(() -> {}); // noop to ensure executor initialized
+              androidx.core.content.ContextCompat.getMainExecutor(appContext)
+                  .execute(() -> {}); // noop to ensure executor initialized
             });
     delayExec.schedule(
         () -> {

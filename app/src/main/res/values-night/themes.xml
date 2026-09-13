@@ -5,7 +5,7 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar">false</item>
-        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
 
         <!-- Material Design 3 Dark color tokens -->
         <item name="colorPrimary">@color/md_theme_dark_primary</item>
@@ -47,7 +47,7 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar">false</item>
-        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
 
         <!-- Material Design 3 Dark color tokens -->
         <item name="colorPrimary">@color/md_theme_dark_primary</item>
